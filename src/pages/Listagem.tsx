@@ -1,4 +1,5 @@
-import axios, { AxiosError } from 'axios';
+import { AxiosError } from 'axios';
+import { api } from '../services/api';
 import { useState, useEffect } from 'react';
 import { formatarData } from '../shared/dataConvert';
 import { Link, useNavigate } from 'react-router-dom';
@@ -29,20 +30,19 @@ export function PaginaListagem() {
       setLoading(true);
     }
 
-    axios.get<Pessoa[]>('http://10.0.0.205:9000/pessoas', {
+    api.get<Pessoa[]>('/pessoas', {
       params: {
         pagina: page,
         max: 15
       },
       headers: {
-        'accept': 'application/json',
-        'Authorization': 'Basic ZGllZ286MTIz' // Seu token de autorização
+        'accept': 'application/json'
       }
     })
       .then(response => {
         if (response.data)
-          if(page === 1)
-           setPessoas(response.data)
+          if (page === 1)
+            setPessoas(response.data)
           else
             setPessoas(prev => [...prev, ...response.data])
       })
@@ -55,15 +55,14 @@ export function PaginaListagem() {
 
 
   useEffect(() => {
-    axios.get<{
+    api.get<{
       total: number
-    }>('http://10.0.0.205:9000/pessoas/total', {
+    }>('/pessoas/total', {
       params: {
         pagina: page
       },
       headers: {
-        'accept': 'application/json',
-        'Authorization': 'Basic ZGllZ286MTIz' // Seu token de autorização
+        'accept': 'application/json'
       }
     })
       .then(response => {

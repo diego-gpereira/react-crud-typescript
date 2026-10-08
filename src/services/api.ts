@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const api = axios.create({ 
-    baseURL: 'http://10.0.0.205:9000/',
+export const api = axios.create({
+    baseURL: import.meta.env.VITE_API_URL,
     headers: {
-        'Authorization': 'Basic ZGllZ286MTIz'
-    }
-})
+        Authorization: import.meta.env.VITE_API_AUTH,
+    },
+});
