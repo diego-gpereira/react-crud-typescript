@@ -4,9 +4,9 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Este projeto é um sistema completo para o gerenciamento de cadastros de pessoas, construído como uma aplicação de página única (SPA - Single-Page Application) moderna e eficiente.
+Este projeto é uma aplicação web para gerenciamento de cadastros de pessoas, construída com React e TypeScript como uma aplicação de página única (SPA).
 
-Foi desenvolvido com **TypeScript** desde o início para garantir um código mais organizado e livre de erros comuns, assegurando que todas as partes do sistema se comuniquem de forma correta e previsível. A aplicação utiliza o **React Router** para uma navegação fluida entre as páginas e o **Tailwind CSS** para um design limpo e responsivo.
+A aplicação utiliza o **React Router** para uma navegação fluida entre as páginas e o **Tailwind CSS** para um design limpo e responsivo.
 
 Os dados são consumidos de uma API REST (desenvolvida em Delphi/Horse), demonstrando a integração completa entre um front-end moderno e um back-end robusto.
 
@@ -18,7 +18,7 @@ Os dados são consumidos de uma API REST (desenvolvida em Delphi/Horse), demonst
 * **Navegação via Rotas:** Estrutura de rotas com `React Router` para uma experiência de SPA fluida entre as telas de listagem e formulários.
 * **CRUD Completo:** Implementação de todas as operações: Criar, Ler, Atualizar e Deletar registros.
 * **Design Responsivo:** Interface estilizada com **Tailwind CSS**, que se adapta a diferentes tamanhos de tela.
-* **Componentização:** A interface foi totalmente estruturada em componentes reutilizáveis, seguindo as melhores práticas do `React`.
+* **Componentização:** Interface estruturada em componentes React, com uso de Hooks.
 * **Comunicação com API:** Integração com o back-end para persistência dos dados, com tratamento de estados de loading e erro.
 
 ---
@@ -28,6 +28,7 @@ Os dados são consumidos de uma API REST (desenvolvida em Delphi/Horse), demonst
 * **Linguagem Principal:** `TypeScript`
 * **Biblioteca Front-End:** `React.js` (com Hooks)
 * **Roteamento:** `React Router`
+* **Formulários:** `React Hook Form`
 * **Estilização:** `Tailwind CSS`
 * **Ambiente/Build:** `Vite`
 * **Requisições HTTP:** `Axios`
